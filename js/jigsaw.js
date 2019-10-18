@@ -1,5 +1,6 @@
 var c = document.getElementById('myCanvas');
 var ctx = c.getContext('2d');
+var series=3;
 var num = [
 	[00, 01, 02],
 	[10, 11, 12],
@@ -44,7 +45,6 @@ function bindingEvents() {//给左边的列表图绑定事件
 	}
 }
 bindingEvents();
-var series=3;
 var img = document.getElementById('myImage');
 
 function change () {//改变难度是触发的函数
