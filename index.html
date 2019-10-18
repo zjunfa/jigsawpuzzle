@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5画布综合项目之拼图游戏</title>
+		<link rel="stylesheet" href="css/cssreset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<h2>HTML5画布综合项目之拼图游戏</h2>
+			<hr />
+			<div class="content">
+				<div class="selectPicture">
+					<div id="recycle" ondragover="allowDrop(event)" ondrop='fileDrop(event)'>
+						您可以自定义图片哟！
+					</div>
+					<div id="output">
+						<ul id="pictureList">
+							<li><img src="img/Ferrari (1).jpg"/></li>
+							<li><img src="img/Ferrari (2).jpg"/></li>
+							<li><img src="img/Ferrari (3).jpg"/></li>
+							<li><img src="img/Ferrari (4).jpg"/></li>
+							<li><img src="img/Ferrari (5).jpg"/></li>
+							<li><img src="img/Ferrari (6).jpg"/></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gameZone">
+					<div id="timeBox">
+						共计时间：<span id="time">00:00:00</span>
+					</div>
+					<canvas id="myCanvas" width="300" height="300" style="border: 1px solid;">
+						对不起，你的浏览器不支持HTML5的画布API。
+					</canvas>
+					<div><button id="onoffBtn" onclick="restartGame()">开始游戏</button></div>
+				</div>
+				<div id="img">
+					<div class="imgBox">
+						<select id="selectID" onchange="change()">
+							<option value="3">三阶难度</option>
+							<option value="4">四阶难度</option>
+							<option value="5">五阶难度</option>
+						</select>
+					</div>
+					<div class="">
+						<img id="myImage" src="img/timg.jpg" style="width: 200px; height: 200px;">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jigsaw.js" ></script>
+	</body>
+
+</html>
